@@ -1,0 +1,27 @@
+ALGORITHM SumDistinctElements.algo
+
+    /* This algorithm finds the sum of all distinct elements from two sets using arrays. */
+
+    BEGIN
+        /* Initialize variables */
+        set1 ← [3, 1, 7, 9]
+        set2 ← [2, 4, 1, 9, 3]
+        combined_set ← CONCATENATE(set1, set2)
+        sum ← 0
+        distinct ← []
+        
+        /* Find the sum of all distinct elements */
+        FOR i ← 1 TO LENGTH(combined_set) DO
+            e ← combined_set[i]
+            IF e NOT IN distinct THEN
+                ADD e TO distinct
+                sum ← sum + e
+            END IF
+        END FOR
+        
+        /* Output the sum of all distinct elements */
+        OUTPUT "Sum of all distinct elements: " + sum
+        OUTPUT "Distinct elements: " + distinct
+    END
+
+END ALGORITHM
